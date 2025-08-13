@@ -9,7 +9,7 @@
             // --- State ---
             const counterElements = document.querySelectorAll('.herenow');
             if (counterElements.length === 0) {
-                console.error('Live counter element with class "herenow" not found.');
+                console.error('Element with class "herenow" not found.');
                 return;
             }
 
@@ -39,7 +39,7 @@
                     });
                 } catch (error) {
                     // It's okay to fail silently here as the user doesn't need to see ping errors.
-                    console.error('Failed to send ping:', error);
+                    console.error('Failed send ping:', error);
                 }
             }
 
@@ -73,7 +73,7 @@
                     console.error('Failed to fetch count:', error);
                     // Update to an error state.
                     counterElements.forEach(el => {
-                        el.textContent = 'Herenow count unavailable';
+                        el.textContent = 'Herenow unavailable';
                     });
                 }
             }

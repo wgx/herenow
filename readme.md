@@ -2,16 +2,16 @@
 
 A feather-light, privacy-respecting, GDPR-compliant visitor counter that shows you how many users are on the page right now. No creepy tracking, no personal data.
 
-![herenow.js Counter Example](https://placehold.co/200x50/ffffff/111827?text=1%20user%20here)
+<img src="img/herenow.gif" alt="2 users here now" style="width:50%;"/>
 
 ---
 
 ## Features
 
-* **Privacy First**: No cookies or personally identifiable information are ever used or stored.
+* **Privacy Respecting**: No cookies or personally identifiable information are ever used or stored.
 * **GDPR Compliant**: Helps you meet your privacy compliance goals effortlessly.
 * **Simple & Minimal**: Just one line of HTML and one script tag. The counter is unstyled by default, giving you complete control over its appearance.
-* **Lightweight**: The script is tiny and loads asynchronously so it won't slow down your site.
+* **Lightweight**: The script is tiny (1kb) and loads asynchronously so it won't slow down your site.
 
 ---
 
