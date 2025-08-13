@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>herenow.js - Simple, Privacy-First Visitor Counter</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter%20Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter Tight', sans-serif;
+        }
+        /* Simple scroll-behavior for smooth anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-10">
+        <nav class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-900">Herenow</a>
+            <!-- Button Container -->
+            <div class="flex items-center gap-4">
+                <a href="https://github.io/wgx/herenow" class="text-slate-600 font-semibold px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors">
+                    Code on Github
+                </a>
+                <a href="#getting-started" class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                    Get Started
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-6 py-12 sm:py-16">
+
+        <!-- Hero Section -->
+        <section class="text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight">
+                See Who's Here, Respect Their Privacy.
+            </h1>
+            <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                herenow.js is a feather-light, cookie-free visitor counter that shows you how many users are on your site right now. No tracking, no personal data, no GDPR headaches.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <div class="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="font-semibold text-slate-700">1 user here</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="mt-20 sm:mt-24">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-slate-900">Privacy First</h3>
+                    <p class="mt-2 text-slate-600">We never use cookies or track personal data. herenow.js is completely anonymous and designed to respect user privacy from the ground up.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-slate-900">GDPR Compliant</h3>
+                    <p class="mt-2 text-slate-600">Since no personal data is ever collected or stored, herenow.js helps you meet your GDPR and privacy compliance goals effortlessly.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-slate-900">Simple & Minimal</h3>
+                    <p class="mt-2 text-slate-600">Just one line of HTML and one script tag. The counter is unstyled by default, giving you complete control to make it blend perfectly with your site's design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="mt-20 sm:mt-24">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-slate-900">Get Started in 60 Seconds</h2>
+                <p class="mt-3 text-lg text-slate-600">Follow these three simple steps to add herenow.js to your website.</p>
+            </div>
+
+            <div class="mt-12 bg-white rounded-xl shadow-lg p-6 sm:p-8">
+                <!-- Step 1: HTML -->
+                <div>
+                    <span class="bg-indigo-100 text-indigo-700 font-bold py-1 px-3 rounded-full">Step 1</span>
+                    <h3 class="text-xl font-semibold text-slate-900 mt-4">Add the HTML Element</h3>
+                    <p class="mt-2 text-slate-600">Place this `span` tag wherever you want the counter to appear on your page. The script will automatically find it and update its content.</p>
+                    <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>&lt;span class="herenow"&gt;1 user here&lt;/span&gt;</code></pre>
+                </div>
+
+                <!-- Step 2: CSS (Optional) -->
+                <div class="mt-8 border-t border-slate-200 pt-8">
+                    <span class="bg-slate-200 text-slate-700 font-bold py-1 px-3 rounded-full">Step 2 (Optional, skip to 3)</span>
+                    <h3 class="text-xl font-semibold text-slate-900 mt-4">Style the Counter</h3>
+                    <p class="mt-2 text-slate-600">The counter is unstyled by default. Add this CSS to your stylesheet to create a nice-looking badge with a pulsing dot.</p>
+                    <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>.herenow-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f0f2f5;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+}
+
+.dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #22c55e;
+    border-radius: 50%;
+    animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    50% { opacity: .5; }
+}</code></pre>
+                    <p class="mt-4 text-slate-600">Then, wrap your counter in a div to apply the styles:</p>
+                    <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>&lt;div class="herenow-container"&gt;
+    &lt;span class="dot"&gt;&lt;/span&gt;
+    &lt;span class="herenow"&gt;1 user here&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <!-- Step 3: JavaScript -->
+                <div class="mt-8 border-t border-slate-200 pt-8">
+                    <span class="bg-indigo-100 text-indigo-700 font-bold py-1 px-3 rounded-full">Step 3</span>
+                    <h3 class="text-xl font-semibold text-slate-900 mt-4">Add the Script</h3>
+                    <p class="mt-2 text-slate-600">Finally, add this script tag <strong>just before the closing `&lt;/body&gt;` tag</strong> on your page. That's it!</p>
+                    <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>&lt;script src="https://SERVERURL/herenow.js" defer&gt;&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-5xl mx-auto px-6 py-12 mt-12 border-t border-slate-200 text-center text-slate-500">
+        <p>&copy; 2025 <a href="https://willgrant.org/">WGX LTD</a>. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.</p>
+    </footer>
+
+</body>
+</html>
+
