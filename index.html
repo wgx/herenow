@@ -26,10 +26,10 @@
     <!-- Header -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-10">
         <nav class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-slate-900">Herenow</a>
+            <a href="#" class="text-2xl font-bold text-slate-900">herenow.js</a>
             <!-- Button Container -->
             <div class="flex items-center gap-4">
-                <a href="https://github.io/wgx/herenow" class="text-slate-600 font-semibold px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors">
+                <a href="https://github.com/wgx/herenow/" class="text-slate-600 font-semibold px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors">
                     Code on Github
                 </a>
                 <a href="#getting-started" class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
@@ -56,7 +56,7 @@
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                     </span>
-                    <span class="font-semibold text-slate-700">1 user here</span>
+                    <span class="font-semibold text-slate-700 herenow">1 user here</span>
                 </div>
             </div>
         </section>
@@ -95,9 +95,16 @@
                     <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>&lt;span class="herenow"&gt;1 user here&lt;/span&gt;</code></pre>
                 </div>
 
-                <!-- Step 2: CSS (Optional) -->
+                <!-- Step 3: JavaScript -->
                 <div class="mt-8 border-t border-slate-200 pt-8">
-                    <span class="bg-slate-200 text-slate-700 font-bold py-1 px-3 rounded-full">Step 2 (Optional, skip to 3)</span>
+                    <span class="bg-indigo-100 text-indigo-700 font-bold py-1 px-3 rounded-full">Step 2</span>
+                    <h3 class="text-xl font-semibold text-slate-900 mt-4">Add the Script</h3>
+                    <p class="mt-2 text-slate-600">Finally, add this script tag <strong>just before the closing `&lt;/body&gt;` tag</strong> on your page. That's it!</p>
+                    <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>&lt;script src="https://SERVERURL/herenow.js" defer&gt;&lt;/script&gt;</code></pre>
+                </div>
+                <!-- Step 3: CSS (Optional) -->
+                <div class="mt-8 border-t border-slate-200 pt-8">
+                    <span class="bg-slate-200 text-slate-700 font-bold py-1 px-3 rounded-full">Step 3 (Optional, you're already done!)</span>
                     <h3 class="text-xl font-semibold text-slate-900 mt-4">Style the Counter</h3>
                     <p class="mt-2 text-slate-600">The counter is unstyled by default. Add this CSS to your stylesheet to create a nice-looking badge with a pulsing dot.</p>
                     <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>.herenow-container {
@@ -127,13 +134,6 @@
 &lt;/div&gt;</code></pre>
                 </div>
 
-                <!-- Step 3: JavaScript -->
-                <div class="mt-8 border-t border-slate-200 pt-8">
-                    <span class="bg-indigo-100 text-indigo-700 font-bold py-1 px-3 rounded-full">Step 3</span>
-                    <h3 class="text-xl font-semibold text-slate-900 mt-4">Add the Script</h3>
-                    <p class="mt-2 text-slate-600">Finally, add this script tag <strong>just before the closing `&lt;/body&gt;` tag</strong> on your page. That's it!</p>
-                    <pre class="bg-slate-800 text-white p-4 rounded-lg mt-4 overflow-x-auto"><code>&lt;script src="https://SERVERURL/herenow.js" defer&gt;&lt;/script&gt;</code></pre>
-                </div>
             </div>
         </section>
     </main>
@@ -144,5 +144,7 @@
     </footer>
 
 </body>
+
+<script src="https://wgx.github.io/herenow/herenow.js" defer></script>
 </html>
 

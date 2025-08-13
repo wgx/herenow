@@ -62,7 +62,7 @@
                     isFirstLoad = false; // This check will only run once.
                     
                     const userText = userCount === 1 ? 'user' : 'users';
-                    const newText = `${userCount} ${userText} here`;
+                    const newText = `${userCount} ${userText} here now`;
 
                     // Update the text content of all counter elements.
                     counterElements.forEach(el => {
@@ -73,7 +73,7 @@
                     console.error('Failed to fetch count:', error);
                     // Update to an error state.
                     counterElements.forEach(el => {
-                        el.textContent = 'Here now count unavailable';
+                        el.textContent = 'Herenow count unavailable';
                     });
                 }
             }
