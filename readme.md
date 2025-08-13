@@ -1,8 +1,8 @@
-# Herenow
+# herenow.js
 
 A feather-light, privacy-respecting, GDPR-compliant visitor counter that shows you how many users are on the page right now. No creepy tracking, no personal data.
 
-![Herenow Counter Example](https://placehold.co/200x50/ffffff/111827?text=1%20user%20here)
+![herenow.js Counter Example](https://placehold.co/200x50/ffffff/111827?text=1%20user%20here)
 
 ---
 
@@ -54,7 +54,7 @@ The counter is unstyled by default. If you'd like to create a styled badge with 
     height: 0.75rem;
     background-color: #22c55e;
     border-radius: 50%;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes pulse {
