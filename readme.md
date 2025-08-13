@@ -22,7 +22,7 @@ A feather-light, privacy-respecting, GDPR-compliant visitor counter that shows y
 Place this `<span>` tag wherever you want the counter to appear on your page. The script will automatically find it by its class name.
 
 ```html
-<span class="herenow">1 user here</span>
+<span class="herenow">1 user here now</span>
 ```
 
 ### 2. Add the Script
@@ -30,7 +30,7 @@ Place this `<span>` tag wherever you want the counter to appear on your page. Th
 Add this script tag just before the closing `</body>` tag on your page. The `defer` attribute ensures it won't block your page from loading.
 
 ```html
-<script src="[https://SERVERNAME/herenow.js](https://SERVERNAME/herenow.js)" defer></script>
+<script src="https://wgx.github.io/herenow/herenow.min.js" defer></script>
 ```
 
 ### 3. Style the Counter (Optional)
@@ -69,12 +69,12 @@ With the dot:
 ```html
 <div class="herenow-container">
     <span class="dot"></span>
-    <span class="herenow">1 user here</span>
+    <span class="herenow">1 user here now</span>
 </div>
 ```
 
 Or just plain text:
 
 ```html
-<span class="herenow">1 user here</span>
+<span class="herenow">1 user here now</span>
 ```
