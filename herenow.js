@@ -86,8 +86,9 @@
     setInterval(sendPing, PING_INTERVAL_MS);
     setInterval(fetchAndUpdateCount, PING_INTERVAL_MS);
 
-    // Use sendBeacon for the final ping, as it's more reliable for unload events.
-    window.addEventListener('beforeunload', function() {
+    // Use `pagehide` instead of `beforeunload` for the final ping.
+    // It is more reliable and avoids permissions policy violations.
+    window.addEventListener('pagehide', function() {
         const payload = JSON.stringify({
             sessionId: sessionId,
             page: pageIdentifier,
@@ -98,3 +99,4 @@
     });
 
 })();
+
