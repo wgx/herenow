@@ -2,7 +2,7 @@
 (function() {
     // --- Configuration ---
     const SERVER_URL = 'https://herenow-server.fly.dev';
-    const PROJECT_URL = 'https://wgx.github.io/herenow/';
+    const PROJECT_URL = 'https://studiowgx.willgrant.org/herenow/';
     const PING_INTERVAL_MS = 65000;
     const SESSION_STORAGE_KEY = 'hereNowSessionId';
 
