@@ -78,3 +78,7 @@ Or just plain text:
 ```html
 <span class="herenow">1 user here now</span>
 ```
+
+## Rebuild the Minified Script
+
+With Node.js and npm installed, run `.\roadroller.ps1` from PowerShell to pack `herenow.js` into `herenow.min.js` using Roadroller.

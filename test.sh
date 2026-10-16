@@ -4,7 +4,7 @@
 # remember to chmod +x this before running
 # --- Configuration ---
 # Change this to your deployed server address if you are not running it locally.
-SERVER_URL="https://herenow.fly.dev"
+SERVER_URL="https://herenow-server.fly.dev"
 PAGE_PATH="/test-page-from-cli"
 
 # Generate two unique session IDs for the test.
