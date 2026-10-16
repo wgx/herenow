@@ -1,7 +1,7 @@
 // Self-invoking async function to encapsulate our logic.
 (function() {
     // --- Configuration ---
-    const SERVER_URL = 'https://herenow-anhz7w.fly.dev';
+    const SERVER_URL = 'https://herenow.fly.dev';
     const PROJECT_URL = 'https://wgx.github.io/herenow/';
     const PING_INTERVAL_MS = 60000;
     const SESSION_STORAGE_KEY = 'hereNowSessionId';
