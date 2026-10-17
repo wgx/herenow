@@ -1,4 +1,4 @@
-# herenow.js
+# [herenow.js](https://studiowgx.willgrant.org/herenow/)
 
 A feather-light, privacy-respecting, GDPR-compliant visitor counter that shows you how many users are on the page right now. No creepy tracking, no personal data.
 
