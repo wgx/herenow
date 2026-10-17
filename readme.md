@@ -30,7 +30,7 @@ Place this `<span>` tag wherever you want the counter to appear on your page. Th
 Add this script tag just before the closing `</body>` tag on your page. The `defer` attribute ensures it won't block your page from loading.
 
 ```html
-<script src="https://studiowgx.willgrant.org/herenow/herenow.min.js" defer></script>
+<script src="https://raw.githubusercontent.com/wgx/herenow/refs/heads/main/herenow.min.js" defer></script>
 ```
 
 ### 3. Style the Counter (Optional)
