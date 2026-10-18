@@ -10,23 +10,21 @@
     var id;
     try { id = sessionStorage.getItem(KEY); } catch (e) {}
     if (!id) {
-        try {
-            id = Array.from(crypto.getRandomValues(new Uint32Array(2)), function (n) { return n.toString(36); }).join('');
-        } catch (e) {
-            id = Date.now().toString(36) + Math.random().toString(36).slice(2);
-        }
+        id = Math.random().toString(36).slice(2, 12);
         try { sessionStorage.setItem(KEY, id); } catch (e) {}
     }
 
     var page = location.hostname + location.pathname;
     // The referrer is only needed by the server once per visit.
     var referrer = document.referrer || 'direct';
-    var links, text;
+    var links;
+
+    function payload() {
+        return JSON.stringify({ sessionId: id, page: page, referrer: referrer });
+    }
 
     function render(count) {
         var t = count + (count == 1 ? ' user' : ' users') + ' here now';
-        if (t == text) return;
-        text = t;
         if (!links) {
             links = Array.from(els, function (el) {
                 var a = document.createElement('a');
@@ -45,9 +43,9 @@
         fetch(URL, {
             method: 'POST',
             priority: 'low',
-            body: JSON.stringify({ sessionId: id, page: page, referrer: referrer })
+            body: payload()
         })
-            .then(function (r) { return r.text(); })
+            .then(function (r) { return r.ok ? r.text() : ''; })
             .then(function (t) {
                 var n = parseInt(t, 10);
                 if (n > 0) {
@@ -60,6 +58,11 @@
                 setTimeout(tick, INTERVAL * (0.9 + Math.random() * 0.2));
             });
     }
+
+    // `pagehide` is more reliable than `beforeunload` for a final ping.
+    addEventListener('pagehide', function () {
+        navigator.sendBeacon(URL, payload());
+    });
 
     if (window.requestIdleCallback) requestIdleCallback(tick, { timeout: 2000 });
     else setTimeout(tick, 200);

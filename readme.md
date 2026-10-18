@@ -81,4 +81,4 @@ Or just plain text:
 
 ## Rebuild the Minified Script
 
-With Node.js and npm installed, run `.\roadroller.ps1` from PowerShell to pack `herenow.js` into `herenow.min.js` using Roadroller.
+With Node.js and npm installed, run `.\build.ps1` from PowerShell to minify `herenow.js` into `herenow.min.js` using Terser.

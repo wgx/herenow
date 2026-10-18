@@ -7,15 +7,15 @@ if (-not (Test-Path -LiteralPath $inputPath -PathType Leaf)) {
     throw "Input file not found: $inputPath"
 }
 
-Write-Host "Packing $inputPath to $outputPath..."
-& npx --yes roadroller $inputPath -o $outputPath
+Write-Host "Minifying $inputPath to $outputPath..."
+& npx --yes terser $inputPath --compress --mangle --output $outputPath
 
 if ($LASTEXITCODE -ne 0) {
-    throw "Roadroller failed with exit code $LASTEXITCODE."
+    throw "Terser failed with exit code $LASTEXITCODE."
 }
 
 if (-not (Test-Path -LiteralPath $outputPath -PathType Leaf)) {
-    throw "Roadroller completed without creating the output file: $outputPath"
+    throw "Terser completed without creating the output file: $outputPath"
 }
 
 Write-Host "Created $outputPath"
